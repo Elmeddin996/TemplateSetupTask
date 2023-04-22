@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
 using TemplateSetupTask.DataAccess;
 using TemplateSetupTask.DataAccess;
 using TemplateSetupTask.Models;
@@ -8,18 +10,20 @@ namespace TemplateSetupTask.Controllers
 {
     public class ServiceController : Controller
     {
+        private readonly DataContext _context;
+
+        public ServiceController(DataContext context)
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            ViewModel vm = new ViewModel
-            {
-                Services = Data.Services
-            };
-
-            return View(vm);
+            List<Service> services = _context.Services.ToList();
+            return View(services);
         }
         public IActionResult Detail(int id)
         {
-            Service srv = Data.Services.Find(x => x.Id == id);
+            Service srv = _context.Services.Find(id);
 
             if (srv == null)
                 return View("Error");

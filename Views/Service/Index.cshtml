@@ -1,4 +1,4 @@
-﻿@model ViewModel
+﻿@model List<Service>
     <main id="main">
 
         <!-- ======= Breadcrumbs ======= -->
@@ -18,11 +18,11 @@
             <div class="container">
 
                 <div class="row">
-                @foreach (Service ser in Model.Services)
+                @foreach (Service ser in Model)
                 {
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch
-                             @(ser.Id!=Model.Services[0].Id?"mt-4 mt-md-0":"")">
+                             @(ser.Id!=Model[0].Id?"mt-4 mt-md-0":"")">
                         <a asp-action="detail" asp-controller="service" asp-route-id="@ser.Id">
                             <div class="icon-box">
                                 <div class="icon"><i class="@ser.Icon"></i></div>

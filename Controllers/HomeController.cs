@@ -13,16 +13,23 @@ namespace TemplateSetupTask.Controllers
     public class HomeController : Controller
     {
 
+        private readonly DataContext _context;
+        public HomeController(DataContext context)
+        { 
+            _context = context;
+        }
         public IActionResult Index()
         {
-            ViewModel vm = new ViewModel
+            ViewModel viewModel = new ViewModel()
             {
-                Features=Data.Features,
-                Services=Data.Services
-            
-            };
+                Features = _context.Features.ToList(),
+                Services = _context.Services.ToList(),
+                Sliders =_context.Sliders.ToList()
 
-            return View(vm);
+            };
+            
+
+            return View(viewModel);
         }
         public IActionResult About()
         {

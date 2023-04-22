@@ -7,5 +7,6 @@ namespace TemplateSetupTask.ViewModels
     {
         public List<Feature> Features { get; set; }
         public List<Service> Services { get; set; }
+        public List<Slider> Sliders { get; set; }
     }
 }

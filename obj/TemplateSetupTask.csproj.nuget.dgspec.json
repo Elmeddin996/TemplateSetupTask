@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\User\\OneDrive\\Desktop\\TemplateSetupTask\\TemplateSetupTask.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\Elmeddin996\\TemplateSetupTask\\TemplateSetupTask.csproj": {}
   },
   "projects": {
-    "C:\\Users\\User\\OneDrive\\Desktop\\TemplateSetupTask\\TemplateSetupTask.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\Elmeddin996\\TemplateSetupTask\\TemplateSetupTask.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\User\\OneDrive\\Desktop\\TemplateSetupTask\\TemplateSetupTask.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\Elmeddin996\\TemplateSetupTask\\TemplateSetupTask.csproj",
         "projectName": "TemplateSetupTask",
-        "projectPath": "C:\\Users\\User\\OneDrive\\Desktop\\TemplateSetupTask\\TemplateSetupTask.csproj",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\Elmeddin996\\TemplateSetupTask\\TemplateSetupTask.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\User\\OneDrive\\Desktop\\TemplateSetupTask\\obj\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\Elmeddin996\\TemplateSetupTask\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,16 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.32, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.5, )"
